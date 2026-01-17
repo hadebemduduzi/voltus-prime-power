@@ -18,10 +18,10 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: Phone, label: "Phone", value: "+1 (555) 123-4567" },
-    { icon: Mail, label: "Email", value: "info@voltusprime.com" },
-    { icon: MapPin, label: "Address", value: "123 Electric Avenue, Power City" },
-    { icon: Clock, label: "Hours", value: "Mon-Sat: 8AM - 6PM" },
+    { icon: Phone, label: "Phone", value: "+27 11 123 4567" },
+    { icon: Mail, label: "Email", value: "info@voltusprime.co.za" },
+    { icon: MapPin, label: "Address", value: "42 Elektriek Street, Sandton, Johannesburg" },
+    { icon: Clock, label: "Hours", value: "Mon-Sat: 7AM - 5PM" },
   ];
 
   return (
@@ -64,8 +64,8 @@ const Contact = () => {
               <p className="text-muted-foreground mb-3">
                 Electrical emergency? We're here to help around the clock.
               </p>
-              <a href="tel:+15551234567" className="text-primary font-semibold text-xl">
-                +1 (555) 123-4567
+              <a href="tel:+27111234567" className="text-primary font-semibold text-xl">
+                +27 11 123 4567
               </a>
             </div>
           </div>
@@ -84,7 +84,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-foreground"
-                  placeholder="John Doe"
+                  placeholder="Thabo Mokoena"
                   required
                 />
               </div>
@@ -99,7 +99,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-foreground"
-                    placeholder="john@email.com"
+                    placeholder="thabo@email.co.za"
                     required
                   />
                 </div>
@@ -113,7 +113,7 @@ const Contact = () => {
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-foreground"
-                    placeholder="+1 (555) 000-0000"
+                    placeholder="+27 82 000 0000"
                   />
                 </div>
               </div>

@@ -77,10 +77,10 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-semibold text-foreground mb-5">Contact Info</h4>
             <ul className="space-y-3 text-muted-foreground">
-              <li>123 Electric Avenue</li>
-              <li>Power City, PC 12345</li>
-              <li>+1 (555) 123-4567</li>
-              <li>info@voltusprime.com</li>
+              <li>42 Elektriek Street</li>
+              <li>Sandton, Johannesburg 2196</li>
+              <li>+27 11 123 4567</li>
+              <li>info@voltusprime.co.za</li>
             </ul>
           </div>
         </div>
