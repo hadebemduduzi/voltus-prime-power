@@ -1,5 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
+/* Horizon Font - Custom font setup */
+@font-face {
+  font-family: 'Horizon';
+  src: url('/fonts/Horizon-Regular.woff2') format('woff2'),
+       url('/fonts/Horizon-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Horizon';
+  src: url('/fonts/Horizon-Bold.woff2') format('woff2'),
+       url('/fonts/Horizon-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fallback to Orbitron if Horizon not found - tech-focused alternative */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -82,11 +103,15 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Horizon', 'Orbitron', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Horizon', 'Orbitron', sans-serif;
+  }
+
+  button, a, nav, input, textarea {
+    font-family: 'Horizon', 'Orbitron', sans-serif;
   }
 }
 
@@ -190,6 +215,48 @@
   }
 }
 
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    filter: brightness(1) drop-shadow(0 0 10px hsl(var(--electric-glow) / 0.3));
+  }
+  50% {
+    filter: brightness(1.2) drop-shadow(0 0 20px hsl(var(--electric-glow) / 0.6));
+  }
+}
+
 .animate-electric-pulse {
   animation: electric-pulse 2s ease-in-out infinite;
 }
@@ -200,4 +267,38 @@
 
 .animate-spark {
   animation: spark 1.5s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.6s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.4s ease-out forwards;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+/* Performance optimizations */
+.animate-fade-in-up,
+.animate-slide-in-left,
+.animate-scale-in {
+  will-change: transform, opacity;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

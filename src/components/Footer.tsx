@@ -1,98 +1,130 @@
-import { Zap } from "lucide-react";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
     { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
     { name: "Products", href: "#products" },
     { name: "About", href: "#about" },
     { name: "Contact", href: "#contact" },
   ];
 
-  const services = [
-    "Residential Electrical",
-    "Commercial Electrical",
-    "Industrial Solutions",
-    "Repairs & Maintenance",
-    "Emergency Services",
+  const productCategories = [
+    "Circuit Breakers",
+    "Wiring & Cables",
+    "Switches & Sockets",
+    "Lighting Solutions",
+    "Distribution Boards",
+    "Safety Equipment",
   ];
 
   return (
-    <footer className="bg-card border-t border-border pt-16 pb-8">
-      <div className="container mx-auto px-4">
+    <footer className="bg-card border-t border-border pt-16 pb-8 relative overflow-hidden">
+      {/* Sub Logo Watermark */}
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
+        <img 
+          src="/sub-logo.png" 
+          alt="" 
+          className="absolute top-10 right-10 w-64 h-auto object-contain blur-sm"
+          aria-hidden="true"
+          loading="lazy"
+        />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Logo & Description */}
-          <div className="lg:col-span-1">
-            <a href="#home" className="flex items-center gap-3 mb-5">
-              <div className="relative">
-                <Zap className="w-8 h-8 text-primary" />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-display font-bold text-lg text-foreground tracking-wider">
-                  VOLTUS
-                </span>
-                <span className="font-display text-[10px] text-primary tracking-[0.3em]">
-                  PRIME
-                </span>
-              </div>
+          <div className="lg:col-span-1 animate-fade-in-up">
+            <a 
+              href="#home" 
+              className="flex items-center gap-3 mb-5 group transition-all duration-300 hover:scale-105 inline-block"
+              style={{ willChange: 'transform' }}
+            >
+              <img 
+                src="/main-logo.png" 
+                alt="Voltus Prime Electrical Logo" 
+                className="h-20 w-auto object-contain transition-all duration-300 group-hover:animate-glow-pulse"
+                style={{ willChange: 'transform, filter' }}
+                loading="lazy"
+              />
             </a>
             <p className="text-muted-foreground leading-relaxed">
-              Your trusted partner for premium electrical components and professional services. 
+              Your trusted partner for premium electrical components and products. 
               Powering homes and businesses with excellence.
             </p>
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
             <h4 className="font-display font-semibold text-foreground mb-5">Quick Links</h4>
             <ul className="space-y-3">
-              {quickLinks.map((link) => (
+              {quickLinks.map((link, index) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-all duration-300 inline-block hover:translate-x-1 group"
+                    style={{ willChange: 'color, transform' }}
                   >
-                    {link.name}
+                    <span className="relative">
+                      {link.name}
+                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
+                    </span>
                   </a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="font-display font-semibold text-foreground mb-5">Our Services</h4>
+          {/* Product Supply */}
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <h4 className="font-display font-semibold text-foreground mb-5">Product Supply</h4>
             <ul className="space-y-3">
-              {services.map((service) => (
-                <li key={service}>
-                  <span className="text-muted-foreground">{service}</span>
+              {productCategories.map((category) => (
+                <li key={category}>
+                  <span className="text-muted-foreground transition-colors duration-300 hover:text-primary cursor-default">
+                    {category}
+                  </span>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             <h4 className="font-display font-semibold text-foreground mb-5">Contact Info</h4>
             <ul className="space-y-3 text-muted-foreground">
-              <li>42 Elektriek Street</li>
-              <li>Sandton, Johannesburg 2196</li>
-              <li>+27 11 123 4567</li>
-              <li>info@voltusprime.co.za</li>
+              <li className="transition-colors duration-300 hover:text-primary">42 Elektriek Street</li>
+              <li className="transition-colors duration-300 hover:text-primary">Sandton, Johannesburg 2196</li>
+              <li className="transition-colors duration-300 hover:text-primary">
+                <a href="tel:+27111234567" className="hover:text-primary">+27 11 123 4567</a>
+              </li>
+              <li className="transition-colors duration-300 hover:text-primary">
+                <a href="mailto:info@voltusprime.co.za" className="hover:text-primary">info@voltusprime.co.za</a>
+              </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-muted-foreground text-sm">
-            © {currentYear} Voltus Prime. All rights reserved.
-          </p>
-          <div className="flex items-center gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+          <div className="flex items-center gap-3 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <img 
+              src="/sub-logo.png" 
+              alt="Voltus Prime Brand Accent" 
+              className="h-10 w-auto object-contain opacity-50 transition-all duration-300 hover:opacity-100 hover:scale-110"
+              style={{ willChange: 'opacity, transform' }}
+              loading="lazy"
+            />
+            <p className="text-muted-foreground text-sm">
+              © {currentYear} Voltus Prime. All rights reserved.
+            </p>
+          </div>
+          <div className="flex items-center gap-6 text-sm text-muted-foreground animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+            <a href="#" className="hover:text-primary transition-all duration-300 hover:translate-y-[-2px]" style={{ willChange: 'color, transform' }}>
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:text-primary transition-all duration-300 hover:translate-y-[-2px]" style={{ willChange: 'color, transform' }}>
+              Terms of Service
+            </a>
           </div>
         </div>
       </div>
