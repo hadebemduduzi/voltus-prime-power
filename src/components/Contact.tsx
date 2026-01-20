@@ -18,9 +18,9 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: Phone, label: "Phone", value: "+27 11 123 4567" },
+    { icon: Phone, label: "Phone", value: "+27 73 581 2357" },
     { icon: Mail, label: "Email", value: "info@voltusprime.co.za" },
-    { icon: MapPin, label: "Address", value: "42 Elektriek Street, Sandton, Johannesburg" },
+    { icon: MapPin, label: "Address", value: "Gauteng, South Africa" },
     { icon: Clock, label: "Hours", value: "Mon-Sat: 7AM - 5PM" },
   ];
 
@@ -82,8 +82,8 @@ const Contact = () => {
               <p className="text-muted-foreground mb-3">
                 Electrical emergency? We're here to help around the clock.
               </p>
-              <a href="tel:+27111234567" className="text-primary font-semibold text-xl">
-                +27 11 123 4567
+              <a href="tel:+27735812357" className="text-primary font-semibold text-xl">
+                +27 73 581 2357
               </a>
             </div>
           </div>

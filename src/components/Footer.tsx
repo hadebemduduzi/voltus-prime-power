@@ -92,10 +92,10 @@ const Footer = () => {
           <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             <h4 className="font-display font-semibold text-foreground mb-5">Contact Info</h4>
             <ul className="space-y-3 text-muted-foreground">
-              <li className="transition-colors duration-300 hover:text-primary">42 Elektriek Street</li>
-              <li className="transition-colors duration-300 hover:text-primary">Sandton, Johannesburg 2196</li>
+              <li className="transition-colors duration-300 hover:text-primary">Gauteng</li>
+              <li className="transition-colors duration-300 hover:text-primary">South Africa</li>
               <li className="transition-colors duration-300 hover:text-primary">
-                <a href="tel:+27111234567" className="hover:text-primary">+27 11 123 4567</a>
+                <a href="tel:+27111234567" className="hover:text-primary">+27 73 581 2357</a>
               </li>
               <li className="transition-colors duration-300 hover:text-primary">
                 <a href="mailto:info@voltusprime.co.za" className="hover:text-primary">info@voltusprime.co.za</a>
@@ -108,7 +108,7 @@ const Footer = () => {
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-3 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <img 
-              src="/sub-logo.png" 
+              src="/subblogo-removebg-preview.png" 
               alt="Voltus Prime Brand Accent" 
               className="h-10 w-auto object-contain opacity-50 transition-all duration-300 hover:opacity-100 hover:scale-110"
               style={{ willChange: 'opacity, transform' }}
