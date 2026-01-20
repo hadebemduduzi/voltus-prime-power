@@ -18,7 +18,7 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: Phone, label: "Phone", value: "+27 73 581 23 57" },
+    { icon: Phone, label: "Phone", value: "+27 67 848 9517" },
     { icon: Mail, label: "Email", value: "info@voltusprime.co.za" },
     { icon: Mail, label: "Email", value: "mduduzi@voltusprime.co.za" },
     { icon: MapPin, label: "Location", value: "Based in Gauteng, South Africa" },
@@ -92,8 +92,8 @@ const Contact = () => {
               <p className="text-muted-foreground mb-3">
                 Electrical emergency? We're here to help around the clock.
               </p>
-              <a href="tel:+27735812357" className="text-primary font-semibold text-xl">
-                +27 73 581 23 57
+              <a href="tel:+27678489517" className="text-primary font-semibold text-xl">
+                +27 67 848 9517
               </a>
             </div>
           </div>
@@ -154,7 +154,7 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all duration-300 text-foreground focus:scale-[1.01] hover:border-primary/50"
-                      placeholder="+27 73 581 23 57"
+                      placeholder="+27 67 848 9517"
                       style={{ willChange: 'transform, border-color' }}
                     />
                 </div>

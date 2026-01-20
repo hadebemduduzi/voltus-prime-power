@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border animate-fade-in-up">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 sm:h-20 relative">
+        <div className="flex items-center justify-between h-20 sm:h-24 md:h-28 relative">
           {/* Desktop Navigation - Left Side */}
           <div className="hidden md:flex items-center gap-8 flex-1">
             {navLinks.map((link, index) => (
@@ -41,7 +41,7 @@ const Navbar = () => {
             <img 
               src="/main-logo.png" 
               alt="Voltus Prime Electrical Logo" 
-              className="h-35 sm:h-12 md:h-14 w-auto object-contain transition-all duration-300 group-hover:animate-glow-pulse"
+              className="h-20 sm:h-24 md:h-28 w-auto object-contain transition-all duration-300 group-hover:animate-glow-pulse"
               style={{ willChange: 'transform, filter' }}
               loading="eager"
             />

@@ -42,7 +42,7 @@ const Footer = () => {
               <img 
                 src="/subblogo-removebg-preview.png" 
                 alt="Voltus Prime Electrical Logo" 
-                className="h-24 sm:h-28 md:h-32 w-auto object-contain transition-all duration-300 group-hover:animate-glow-pulse"
+                className="h-40 sm:h-48 md:h-56 w-auto object-contain transition-all duration-300 group-hover:animate-glow-pulse"
                 style={{ willChange: 'transform, filter' }}
                 loading="lazy"
               />
@@ -56,7 +56,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
             <h4 className="font-display font-semibold text-foreground mb-5">Quick Links</h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={link.name}>
                   <a
@@ -99,7 +99,7 @@ const Footer = () => {
                 <span className="font-medium">Service Area:</span> All of South Africa & Neighboring Countries
               </li>
               <li className="transition-colors duration-300 hover:text-primary">
-                <a href="tel:+27735812357" className="hover:text-primary">+27 73 581 23 57</a>
+                <a href="tel:+27678489517" className="hover:text-primary">+27 67 848 9517</a>
               </li>
               <li className="transition-colors duration-300 hover:text-primary">
                 <a href="mailto:info@voltusprime.co.za" className="hover:text-primary">info@voltusprime.co.za</a>
