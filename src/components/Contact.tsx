@@ -18,14 +18,15 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: Phone, label: "Phone", value: "+27 73 581 2357" },
+    { icon: Phone, label: "Phone", value: "+27 73 581 23 57" },
     { icon: Mail, label: "Email", value: "info@voltusprime.co.za" },
-    { icon: MapPin, label: "Address", value: "Gauteng, South Africa" },
+    { icon: Mail, label: "Email", value: "mduduzi@voltusprime.co.za" },
+    { icon: MapPin, label: "Location", value: "Based in Gauteng, South Africa" },
     { icon: Clock, label: "Hours", value: "Mon-Sat: 7AM - 5PM" },
   ];
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden">
+    <section id="contact" className="py-16 sm:py-20 md:py-24 relative overflow-hidden">
       {/* Sub Logo Watermark */}
       <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
         <img 
@@ -41,22 +42,22 @@ const Contact = () => {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 animate-fade-in-up">
           <span className="text-primary font-medium uppercase tracking-wider text-sm">Get In Touch</span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mt-4 mb-4 sm:mb-6 animate-fade-in-up px-2" style={{ animationDelay: '0.1s' }}>
             Contact <span className="text-primary">Us</span>
           </h2>
-          <p className="text-muted-foreground text-lg animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Ready to power up your project? Reach out to us for a free consultation and quote.
+          <p className="text-muted-foreground text-base sm:text-lg animate-fade-in-up px-4" style={{ animationDelay: '0.2s' }}>
+            Based in Gauteng, South Africa. We provide electrical supplies throughout South Africa and neighboring countries.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Contact Info */}
           <div className="animate-fade-in-up" style={{ animationDelay: '0.3s', willChange: 'opacity, transform' }}>
             <h3 className="font-display text-2xl font-semibold mb-8">Get In Touch</h3>
             <div className="space-y-6 mb-10">
               {contactInfo.map((item, index) => (
                 <div 
-                  key={item.label} 
+                  key={`${item.label}-${index}`} 
                   className="flex items-start gap-4 transition-all duration-300 hover:translate-x-2 group"
                   style={{ 
                     animationDelay: `${0.4 + index * 0.1}s`,
@@ -68,7 +69,16 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-muted-foreground text-sm group-hover:text-foreground transition-colors duration-300">{item.label}</p>
-                    <p className="text-foreground font-medium group-hover:text-primary transition-colors duration-300">{item.value}</p>
+                    {item.label === "Email" && item.value.includes("@") ? (
+                      <a 
+                        href={`mailto:${item.value}`}
+                        className="text-foreground font-medium group-hover:text-primary transition-colors duration-300 hover:underline"
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <p className="text-foreground font-medium group-hover:text-primary transition-colors duration-300">{item.value}</p>
+                    )}
                   </div>
                 </div>
               ))}
@@ -83,7 +93,7 @@ const Contact = () => {
                 Electrical emergency? We're here to help around the clock.
               </p>
               <a href="tel:+27735812357" className="text-primary font-semibold text-xl">
-                +27 73 581 2357
+                +27 73 581 23 57
               </a>
             </div>
           </div>
@@ -118,7 +128,7 @@ const Contact = () => {
                   style={{ willChange: 'transform, border-color' }}
                 />
               </div>
-              <div className="grid sm:grid-cols-2 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                     Email
@@ -144,7 +154,7 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all duration-300 text-foreground focus:scale-[1.01] hover:border-primary/50"
-                      placeholder="+27 82 000 0000"
+                      placeholder="+27 73 581 23 57"
                       style={{ willChange: 'transform, border-color' }}
                     />
                 </div>
@@ -166,7 +176,7 @@ const Contact = () => {
               </div>
               <button 
                 type="submit" 
-                className="btn-electric w-full flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[1.02]"
+                className="btn-electric w-full flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[1.02] touch-manipulation min-h-[44px]"
                 style={{ willChange: 'transform' }}
               >
                 Send Message

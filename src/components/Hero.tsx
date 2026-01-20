@@ -2,7 +2,7 @@ import { Zap, ArrowRight, Shield, Clock, Award } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center pt-16 sm:pt-20 overflow-hidden">
       {/* Header Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-scale-in"
@@ -43,19 +43,19 @@ const Hero = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="font-display text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up" 
+          <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 animate-fade-in-up px-2" 
             style={{ 
               animationDelay: '0.1s',
               willChange: 'opacity, transform'
             }}
           >
-            <span className="text-foreground">Powering Your</span>
+            <span className="text-foreground">Igniting the</span>
             <br />
-            <span className="text-primary text-glow">Future Forward</span>
+            <span className="text-primary text-glow">Future</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up" 
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8 sm:mb-10 animate-fade-in-up px-4" 
             style={{ 
               animationDelay: '0.2s',
               willChange: 'opacity, transform'
@@ -65,7 +65,7 @@ const Hero = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in-up" 
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-12 sm:mb-16 animate-fade-in-up px-4" 
             style={{ 
               animationDelay: '0.3s',
               willChange: 'opacity, transform'
@@ -73,15 +73,15 @@ const Hero = () => {
           >
             <a 
               href="#products" 
-              className="btn-electric flex items-center gap-2 w-full sm:w-auto justify-center transition-all duration-300 hover:scale-105"
+              className="btn-electric flex items-center gap-2 w-full sm:w-auto justify-center transition-all duration-300 hover:scale-105 touch-manipulation min-h-[44px]"
               style={{ willChange: 'transform' }}
             >
               Browse Products
               <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
             <a 
-              href="#contact" 
-              className="btn-outline-electric w-full sm:w-auto text-center transition-all duration-300 hover:scale-105"
+              href="mailto:info@voltusprime.co.za?subject=Quote Request&body=Hello,%0D%0A%0D%0AI would like to request a quote for electrical components/products.%0D%0A%0D%0AThank you!" 
+              className="btn-outline-electric w-full sm:w-auto text-center transition-all duration-300 hover:scale-105 touch-manipulation min-h-[44px]"
               style={{ willChange: 'transform' }}
             >
               Get Quote
@@ -111,8 +111,8 @@ const Hero = () => {
         </div>
 
         {/* Animated Thunderbolt Icon */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-20">
-          <Zap className="w-40 h-40 text-primary animate-float" />
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-20 hidden sm:block">
+          <Zap className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 text-primary animate-float" />
         </div>
       </div>
     </section>

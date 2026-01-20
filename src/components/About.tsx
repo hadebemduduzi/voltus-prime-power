@@ -11,7 +11,7 @@ const highlights = [
 
 const About = () => {
   return (
-    <section id="about" className="py-24 relative overflow-hidden">
+    <section id="about" className="py-16 sm:py-20 md:py-24 relative overflow-hidden">
       {/* Sub Logo Watermark */}
       <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
         <img 
@@ -26,17 +26,17 @@ const About = () => {
       <div className="absolute inset-0 bg-secondary/30" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Content */}
           <div className="animate-fade-in-up" style={{ willChange: 'opacity, transform' }}>
             <span className="text-primary font-medium uppercase tracking-wider text-sm">About Us</span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mt-4 mb-4 sm:mb-6 animate-fade-in-up px-2" style={{ animationDelay: '0.1s' }}>
               Why Choose <span className="text-primary">Voltus Prime</span>?
             </h2>
-            <p className="text-muted-foreground text-lg mb-8 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <p className="text-muted-foreground text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed animate-fade-in-up px-2" style={{ animationDelay: '0.2s' }}>
               At Voltus Prime, we're committed to delivering excellence in every project. 
-              Whether you need quality electrical components or products, 
-              our team of experts ensures your complete satisfaction.
+              Based in Gauteng, South Africa, we provide quality electrical components and products 
+              throughout South Africa and neighboring countries. Our team of experts ensures your complete satisfaction.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 mb-8 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
@@ -56,8 +56,8 @@ const About = () => {
             </div>
 
             <a 
-              href="#contact" 
-              className="btn-electric inline-block transition-all duration-300 hover:scale-105 animate-fade-in-up"
+              href="mailto:info@voltusprime.co.za?subject=Get Started&body=Hello,%0D%0A%0D%0AI would like to get started with Voltus Prime.%0D%0A%0D%0AThank you!" 
+              className="btn-electric inline-block transition-all duration-300 hover:scale-105 animate-fade-in-up touch-manipulation min-h-[44px]"
               style={{ 
                 animationDelay: '0.6s',
                 willChange: 'transform'

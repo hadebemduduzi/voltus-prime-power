@@ -18,7 +18,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-card border-t border-border pt-16 pb-8 relative overflow-hidden">
+    <footer className="bg-card border-t border-border pt-12 sm:pt-16 pb-6 sm:pb-8 relative overflow-hidden">
       {/* Sub Logo Watermark */}
       <div className="absolute inset-0 opacity-5 pointer-events-none">
         <img 
@@ -31,7 +31,7 @@ const Footer = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 mb-8 sm:mb-12">
           {/* Logo & Description */}
           <div className="lg:col-span-1 animate-fade-in-up">
             <a 
@@ -40,16 +40,16 @@ const Footer = () => {
               style={{ willChange: 'transform' }}
             >
               <img 
-                src="/main-logo.png" 
+                src="/subblogo-removebg-preview.png" 
                 alt="Voltus Prime Electrical Logo" 
-                className="h-20 w-auto object-contain transition-all duration-300 group-hover:animate-glow-pulse"
+                className="h-24 sm:h-28 md:h-32 w-auto object-contain transition-all duration-300 group-hover:animate-glow-pulse"
                 style={{ willChange: 'transform, filter' }}
                 loading="lazy"
               />
             </a>
             <p className="text-muted-foreground leading-relaxed">
               Your trusted partner for premium electrical components and products. 
-              Powering homes and businesses with excellence.
+              Based in Gauteng, South Africa, serving clients throughout South Africa and neighboring countries.
             </p>
           </div>
 
@@ -92,13 +92,20 @@ const Footer = () => {
           <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             <h4 className="font-display font-semibold text-foreground mb-5">Contact Info</h4>
             <ul className="space-y-3 text-muted-foreground">
-              <li className="transition-colors duration-300 hover:text-primary">Gauteng</li>
-              <li className="transition-colors duration-300 hover:text-primary">South Africa</li>
               <li className="transition-colors duration-300 hover:text-primary">
-                <a href="tel:+27111234567" className="hover:text-primary">+27 73 581 2357</a>
+                <span className="font-medium">Based in:</span> Gauteng, South Africa
+              </li>
+              <li className="transition-colors duration-300 hover:text-primary">
+                <span className="font-medium">Service Area:</span> All of South Africa & Neighboring Countries
+              </li>
+              <li className="transition-colors duration-300 hover:text-primary">
+                <a href="tel:+27735812357" className="hover:text-primary">+27 73 581 23 57</a>
               </li>
               <li className="transition-colors duration-300 hover:text-primary">
                 <a href="mailto:info@voltusprime.co.za" className="hover:text-primary">info@voltusprime.co.za</a>
+              </li>
+              <li className="transition-colors duration-300 hover:text-primary">
+                <a href="mailto:mduduzi@voltusprime.co.za" className="hover:text-primary">mduduzi@voltusprime.co.za</a>
               </li>
             </ul>
           </div>

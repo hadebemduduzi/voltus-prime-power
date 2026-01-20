@@ -14,23 +14,9 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border animate-fade-in-up">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <a 
-            href="#home" 
-            className="flex items-center gap-3 group transition-all duration-300 hover:scale-105"
-          >
-            <img 
-              src="/main-logo.png" 
-              alt="Voltus Prime Electrical Logo" 
-              className="h-40 w-auto object-contain transition-all duration-300 group-hover:animate-glow-pulse"
-              style={{ willChange: 'transform, filter' }}
-              loading="eager"
-            />
-          </a>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+        <div className="flex items-center justify-between h-16 sm:h-20 relative">
+          {/* Desktop Navigation - Left Side */}
+          <div className="hidden md:flex items-center gap-8 flex-1">
             {navLinks.map((link, index) => (
               <a
                 key={link.name}
@@ -45,22 +31,42 @@ const Navbar = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
-            <a 
-              href="#contact" 
-              className="btn-electric text-sm py-3 px-6 transition-all duration-300 hover:scale-105"
-              style={{ willChange: 'transform' }}
-            >
-              Get Quote
-            </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-foreground p-2"
+          {/* Logo - Centered */}
+          <a 
+            href="#home" 
+            className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2 sm:gap-3 group transition-all duration-300 hover:scale-105"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+            <img 
+              src="/main-logo.png" 
+              alt="Voltus Prime Electrical Logo" 
+              className="h-35 sm:h-12 md:h-14 w-auto object-contain transition-all duration-300 group-hover:animate-glow-pulse"
+              style={{ willChange: 'transform, filter' }}
+              loading="eager"
+            />
+          </a>
+
+          {/* Right Side - Desktop Get Quote Button / Mobile Menu Button */}
+          <div className="flex-1 flex justify-end">
+            <div className="hidden md:flex">
+              <a 
+                href="mailto:info@voltusprime.co.za?subject=Quote Request&body=Hello,%0D%0A%0D%0AI would like to request a quote for electrical components/products.%0D%0A%0D%0AThank you!" 
+                className="btn-electric text-sm py-3 px-6 transition-all duration-300 hover:scale-105"
+                style={{ willChange: 'transform' }}
+              >
+                Get Quote
+              </a>
+            </div>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="md:hidden text-foreground p-2 touch-manipulation"
+              aria-label="Toggle menu"
+              aria-expanded={isOpen}
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -79,7 +85,7 @@ const Navbar = () => {
                 </a>
               ))}
               <a 
-                href="#contact" 
+                href="mailto:info@voltusprime.co.za?subject=Quote Request&body=Hello,%0D%0A%0D%0AI would like to request a quote for electrical components/products.%0D%0A%0D%0AThank you!" 
                 className="btn-electric text-center mt-4 transition-all duration-300 hover:scale-105"
                 style={{ willChange: 'transform' }}
               >
