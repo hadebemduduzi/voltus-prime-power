@@ -41,7 +41,7 @@ const products = [
   {
     category: "Aluminium Conductors",
     items: ["ACSR", "AAC", "AAAC"],
-    image: "/products/aluminium-conductors.jpg",
+    image: "/products/aluminium-conductors.jpeg",
     fallback: "🔗",
   },
   {

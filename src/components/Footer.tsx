@@ -102,6 +102,9 @@ const Footer = () => {
                 <a href="tel:+27678489517" className="hover:text-primary">+27 67 848 9517</a>
               </li>
               <li className="transition-colors duration-300 hover:text-primary">
+                <a href="tel:+27735812357" className="hover:text-primary">+27 73 581 2357</a>
+              </li>
+              <li className="transition-colors duration-300 hover:text-primary">
                 <a href="mailto:info@voltusprime.co.za" className="hover:text-primary">info@voltusprime.co.za</a>
               </li>
               <li className="transition-colors duration-300 hover:text-primary">

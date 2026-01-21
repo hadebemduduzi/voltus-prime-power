@@ -19,6 +19,7 @@ const Contact = () => {
 
   const contactInfo = [
     { icon: Phone, label: "Phone", value: "+27 67 848 9517" },
+    { icon: Phone, label: "Phone", value: "+27 73 581 2357" },
     { icon: Mail, label: "Email", value: "info@voltusprime.co.za" },
     { icon: Mail, label: "Email", value: "mduduzi@voltusprime.co.za" },
     { icon: MapPin, label: "Location", value: "Based in Gauteng, South Africa" },
@@ -72,6 +73,13 @@ const Contact = () => {
                     {item.label === "Email" && item.value.includes("@") ? (
                       <a 
                         href={`mailto:${item.value}`}
+                        className="text-foreground font-medium group-hover:text-primary transition-colors duration-300 hover:underline"
+                      >
+                        {item.value}
+                      </a>
+                    ) : item.label === "Phone" && item.value.includes("+27") ? (
+                      <a 
+                        href={`tel:${item.value.replace(/\s/g, "")}`}
                         className="text-foreground font-medium group-hover:text-primary transition-colors duration-300 hover:underline"
                       >
                         {item.value}
