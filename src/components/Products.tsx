@@ -35,7 +35,7 @@ const products = [
   {
     category: "Wiring & Cables",
     items: ["House Wiring", "Industrial Cables", "Armored Cables", "Flexible Cables"],
-    image: "/products/wiring-cables.webp",
+    image: "/products/Cables.jpeg",
     fallback: "⚡",
   },
   {
@@ -97,6 +97,12 @@ const products = [
     items: ["Surge Protectors", "Earthing Kit", "Safety Switches", "Isolators"],
     image: "/products/safety-equipment.webp",
     fallback: "🛡️",
+  },
+  {
+    category: "Stay Rods",
+    items: ["Non-Adjustable Stay Rods", "Galvanized Stay Rods", "Various Sizes", "Anchor Plates"],
+    image: "/products/Stay Rods non adjustable.jpeg",
+    fallback: "⚓",
   },
 ];
 
